@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vallu Venkata Lakshmi Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  scroll-behavior: smooth;
+}
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #4a90e2, #6a11cb);
+  animation: fadeIn 1.5s ease-in-out;
+}
+header h1 { font-size: 3rem; }
+header p { font-size: 1.2rem; margin-top: 10px; }
+section {
+  margin: 20px;
+  padding: 30px;
+  background: #1e293b;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+ul { padding-left: 20px; }
+li { margin-bottom: 8px; }
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #020617;
+}
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: #4a90e2;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e2e8f0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Vallu Venkata Lakshmi</h1>
+  <p>Computer Science Student | Cloud Enthusiast</p>
+  <a href="#contact" class="btn">Contact Me</a>
+</header><section class="reveal">
+  <h2>About Me</h2>
+  <p>Enthusiastic Computer Science student with knowledge in Python and Cloud Computing. Passionate about building real-world projects and learning new technologies.</p>
+</section><section class="reveal">
+  <h2>Education</h2>
+  <ul>
+    <li>B.Tech (CSE) – Dadi Institute of Engineering and Technology (79%)</li>
+    <li>Intermediate – 91%</li>
+    <li>SSC – 95%</li>
+  </ul>
+</section><section class="reveal">
+  <h2>Skills</h2>
+  <ul>
+    <li>Python</li>
+    <li>AWS Cloud</li>
+    <li>Linux</li>
+    <li>Computer Networks</li>
+  </ul>
+</section><section class="reveal">
+  <h2>Internship</h2>
+  <p><strong>AWS Cloud Intern – EduSkills</strong></p>
+  <ul>
+    <li>Worked with EC2, S3, IAM, CloudWatch</li>
+    <li>Managed cloud infrastructure</li>
+  </ul>
+</section><section class="reveal">
+  <h2>Projects</h2>
+  <p><strong>Safe Drinking Water Survey</strong></p>
+  <ul>
+    <li>Collected and analyzed water quality data</li>
+    <li>Suggested improvements</li>
+  </ul>
+</section><section class="reveal">
+  <h2>Achievements</h2>
+  <ul>
+    <li>2nd Prize in Running Competition</li>
+    <li>IEEE Hackathon Participant</li>
+    <li>ACM Coding Quiz Participant</li>
+  </ul>
+</section><section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <p>Email: 
+    <a href="mailto:venkatalakshmivallu2006@gmail.com?subject=Hiring Inquiry" style="color:#38bdf8; text-decoration:none;">
+      venkatalakshmivallu2006@gmail.com
+    </a>
+  </p>
+  <p>Phone: 9948728569</p>
+  <p>Location: Anakapalle, Andhra Pradesh</p>
+  <a href="mailto:venkatalakshmivallu2006@gmail.com?subject=Hiring Inquiry" class="btn">Email Me</a>
+</section><footer>
+  <p>© 2026 Vallu Venkata Lakshmi</p>
+</footer><script>
+const sections = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    const boxTop = section.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      section.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+</script></body>
+</html>
